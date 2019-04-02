@@ -12,12 +12,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header-fixed {
   margin: -7px;
   background: rgb(255,128,170);
   background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
-	/* background-color:  rgba(38, 132, 240, 0.8); */
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 80px;

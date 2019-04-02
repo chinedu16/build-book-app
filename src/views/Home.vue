@@ -7,27 +7,21 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>My Books List <span style="font-size: 10px; font-weight: lighter;" >(BOOKS REVIEWED BY YOU)</span></p>
+          <p>{{header.main}}<span style="font-size: 10px; font-weight: lighter;">  {{header.sub}}</span></p>
         </div>
         <div class="search">
           <input type="text" id="fname" name="password" placeholder="Search Book..">
         </div>
       </div>
       <div class="content-body">
-        <div class="grid-container">
-          
-          <div class="card">
-            <div class="bg-img">
-
-            </div>
+        <div class="grid-container" >          
+          <div class="card" v-for="book in books" :key="book.id">
+            <img class="bg-img" :src="book.url" alt="" srcset="">
             <div class="card-content">
-              <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried <star-rating v-bind:star-size="25" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
-            </div>
-
-            
+              <h4>{{book.title}}</h4>
+              <p>{{book.author}}<star-rating v-bind:star-size="25" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
+            </div>            
           </div>
-          
         </div>
     </div>
 
@@ -41,107 +35,62 @@
 <script>
 import Vue from 'vue'
 import VueStarRating from 'vue-star-rating';
-
-
 Vue.component('star-rating', VueStarRating.default);
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
 import Header from '@/components/Partials/Header.vue'
 import Sidebar from '@/components/Partials/Sidebar.vue'
 
 export default {
   name: 'home',
+  data: function () {
+    return {
+      header: {
+        main: 'My Books List',
+        sub: '(BOOKS REVIEWED BY YOU)'
+      },
+      books : [
+        {
+          id: 1,
+          url: 'https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        },
+        {
+          id: 2,
+          url: 'https://prodimage.images-bn.com/pimages/9781603762977_p0_v1_s550x406.jpg',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        },
+        {
+          id: 3,
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1f5SDryi8ySTT5Pn8bKxTw-RWB-1skdv_lqfqcLWnno1nul1',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        },
+        {
+          id: 4,
+          url: 'https://images.gr-assets.com/books/1441227765l/355697.jpg',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        },
+        {
+          id: 5,
+          url: 'http://nickpage.co.uk/wp-content/uploads/2016/05/DarkNightOfTheShedcover-229x330.jpg',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        },
+        {
+          id: 6,
+          url: 'http://nickpage.co.uk/wp-content/uploads/2014/07/KoF2-248x330.jpg',
+          title: 'Remote: Office Not Required',
+          author: 'Jason Fried ' 
+        }
+      ]
+    }
+  },
   components: {
-    // HelloWorld,
     'sidebar': Sidebar,
     'header-tab': Header
   }
 }
 </script>
-
-<style scoped>
-/* Start card component */
-.card {
-  border: 1px solid #d3d3d3;
-  border-radius: .25rem;
-}
-
-.bg-img {
-  background-size: cover;
-  background-image:url('https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg');
-  min-height: 150px;
-  background-position: center;
-  background-color: #ccc;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-button {
-  background: rgb(0,179,0);
-  background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(0,153,0,1) 100%);
-  border: 1px solid rgb(225,255,128);
-  color: white;
-  font-weight: bold;
-  padding: .5rem 1rem;
-  cursor: pointer;
-  border-radius: .25rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-/* end card components */
-
-
-.main {
-  background: aliceblue;
-  margin-left: -7px;
-}
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-.content {
-    min-height: 783px;
-}
-.content .content-body {
-  margin-top: 60px;
-  height: auto;
-  padding: 10px;
-  background-color: #ffffff;
-  margin-left: 250px;
-  margin-right: 250px;
-  border-style: ridge;
-  border-radius: 5px;
-  border-color: aliceblue;
-}
-.content .content-header {
-  margin-left: 250px;
-  margin-right: 250px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 70px;
-}
-
-.content .content-header p {
-  font-size: 23px;
-    font-weight: bold;
-}
-.content .content-header .search {
-  width: 300px;
-}
-
-
-
-</style>
 
