@@ -1,10 +1,10 @@
 <template>
     <div class="sidebar">
         <nav>
-            <router-link to="/timeline"><i class="fas fa-stream"></i><a href="">Timeline</a></router-link>
-            <router-link to="/home"><i class="fas fa-book"></i><a href="" class="active">My Books</a></router-link>
-            <router-link to="/review"><i class="fas fa-star"></i><a href=""> Add Review</a></router-link>
-            <router-link to="/notification"><i class="fas fa-bell"></i><a href="">Notification</a></router-link>
+            <router-link to="/timeline"><i class="fas fa-stream"></i> <a href="">Timeline</a></router-link>
+            <router-link to="/home"><i class="fas fa-book"></i> <a href="" class="active">My Books</a></router-link>
+            <router-link to="/review"><i class="fas fa-star"></i> <a href=""> Add Review</a></router-link>
+            <router-link to="/notification"><i class="fas fa-bell"></i> <a href="">Notification</a></router-link>
         </nav>
     </div>
 </template>
@@ -24,6 +24,7 @@ export default {
   margin-right: 20px;
   text-decoration: none;
   color: #2c3e50;
+  font-weight: lighter;
 
 }
 .sidebar nav a:hover {
