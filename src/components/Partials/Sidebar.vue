@@ -1,10 +1,10 @@
 <template>
     <div class="sidebar">
         <nav>
-            <router-link to="/timeline"><a href="">Timeline</a></router-link>
-            <router-link to="/home"> <a href="" class="active">My Books</a></router-link>
-            <router-link to="/review"><a href=""> Add Review</a></router-link>
-            <router-link to="/notification"><a href="">Notification</a></router-link>
+            <router-link to="/timeline"><i class="fas fa-stream"></i><a href="">Timeline</a></router-link>
+            <router-link to="/home"><i class="fas fa-book"></i><a href="" class="active">My Books</a></router-link>
+            <router-link to="/review"><i class="fas fa-star"></i><a href=""> Add Review</a></router-link>
+            <router-link to="/notification"><i class="fas fa-bell"></i><a href="">Notification</a></router-link>
         </nav>
     </div>
 </template>
@@ -27,7 +27,7 @@ export default {
 
 }
 .sidebar nav a:hover {
-  color: rgba(38, 132, 240, 0.8);
+  color: rgba(0,179,0,1);
 }
 
 .sidebar nav a:active {

@@ -7,7 +7,7 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>{{msg}}</p>
+          <p><i class="fas fa-star"></i>{{msg}}</p>
         </div>
         <div class="search">
           <input type="text" id="fname" name="password" placeholder="Search Books..">

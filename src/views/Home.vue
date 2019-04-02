@@ -7,7 +7,7 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>{{header.main}}<span style="font-size: 10px; font-weight: lighter;">  {{header.sub}}</span></p>
+          <p><i class="fas fa-book"></i>{{header.main}}<span style="font-size: 10px; font-weight: lighter;">  {{header.sub}}</span></p>
         </div>
         <div class="search">
           <input type="text" id="fname" name="password" placeholder="Search Book..">

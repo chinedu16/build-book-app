@@ -8,7 +8,7 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>Notification</p>
+          <p><i class="fas fa-bell"></i>{{msg}}</p>
         </div>
         <div class="search">
           <input type="text" id="fname" name="password" placeholder="Search..">
@@ -26,15 +26,17 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
 import Header from '@/components/Partials/Header.vue'
 import Sidebar from '@/components/Partials/Sidebar.vue'
 
 export default {
   name: 'home',
+  data:  function () {
+    return {
+      msg: 'Notification'
+    }
+  },
   components: {
-    // HelloWorld,
     'sidebar': Sidebar,
     'header-tab': Header
   }
