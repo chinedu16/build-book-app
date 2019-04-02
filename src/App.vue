@@ -6,6 +6,7 @@
 </template>
 
 <style>
+@import 'assets/style.css';
 #app {
   /* height: 900px; */
   padding: 0;
