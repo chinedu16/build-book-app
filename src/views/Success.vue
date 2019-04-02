@@ -18,26 +18,40 @@
 
     <div class="content">
       <div class="content-header">
-        <div class="content-header-name">
-          <p>My Books List <span style="font-size: 10px; font-weight: lighter;" >(BOOKS REVIEWED BY YOU)</span></p>
-        </div>
-        <div class="search">
-          <input type="text" id="fname" name="password" placeholder="Search Book..">
+        <img src="https://img.icons8.com/color/350/000000/ok.png">
+        <p>Thanks You!</p>
+        <p>You have submitted your first book review. Now its time to make some friends</p>
+        <div class="btn" style="text-align: center; ">
+            <router-link to='/home'><button>Add Friends</button></router-link>
         </div>
       </div>
       <div class="content-body">
+          <p style="text-align: center;font-weight: bold;">YOU MAY ALSO BE INTERESED IN</p>
         <div class="grid-container">
           
           <div class="card">
             <div class="bg-img">
-
             </div>
             <div class="card-content">
               <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried <star-rating v-bind:star-size="25" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
+              <p>Jason Fried </p> 
+            </div> 
+          </div>
+           <div class="card">
+            <div class="bg-img">
             </div>
-
-            
+            <div class="card-content">
+              <h4>Remote: Office Not Required</h4>
+              <p>Jason Fried </p> 
+            </div>  
+          </div>
+           <div class="card">
+            <div class="bg-img">
+            </div>
+            <div class="card-content">
+              <h4>Remote: Office Not Required</h4>
+              <p>Jason Fried </p> 
+            </div> 
           </div>
           
         </div>
@@ -153,21 +167,20 @@ input[type=text], select {
     min-height: 783px;
 }
 .content .content-body {
-  margin-top: 60px;
-  height: auto;
-  padding: 10px;
-  background-color: #ffffff;
-  margin-left: 250px;
-  margin-right: 250px;
-  border-style: ridge;
-  border-radius: 5px;
-  border-color: aliceblue;
+    margin-top: 60px;
+    height: auto;
+    padding: 10px;
+    /* background-color: #ffffff; */
+    margin-left: 250px;
+    margin-right: 250px;
+    /* border-style: ridge; */
+    /* border-radius: 5px; */
+    /* border-color: aliceblue; */
 }
 .content .content-header {
   margin-left: 250px;
   margin-right: 250px;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   margin-top: 70px;
 }
 
@@ -179,10 +192,9 @@ input[type=text], select {
   width: 300px;
 }
 .header-fixed {
-  margin: -7px;
-  background: rgb(255,128,170);
-  background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
-	/* background-color:  rgba(38, 132, 240, 0.8); */
+    margin: -7px;
+	background: rgb(255,128,170);
+    background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 80px;

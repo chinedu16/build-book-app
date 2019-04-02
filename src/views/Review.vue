@@ -7,10 +7,10 @@
       </div>
     </header>
 
-    <div class="sidebar">
+   <div class="sidebar">
         <nav>
             <router-link to="/timeline"><a href="">Timeline</a></router-link>
-            <router-link to="/home"> <a href="" class="active">My Books</a></router-link>
+            <router-link to="/home"> <a href="">My Books</a></router-link>
             <router-link to="/review"><a href=""> Add Review</a></router-link>
             <router-link to="/notification"><a href="">Notification</a></router-link>
         </nav>
@@ -19,28 +19,47 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>My Books List <span style="font-size: 10px; font-weight: lighter;" >(BOOKS REVIEWED BY YOU)</span></p>
+          <p>Add Books Review</p>
         </div>
         <div class="search">
-          <input type="text" id="fname" name="password" placeholder="Search Book..">
+          <input type="text" id="fname" name="password" placeholder="Search Books..">
         </div>
       </div>
       <div class="content-body">
-        <div class="grid-container">
-          
+
           <div class="card">
-            <div class="bg-img">
-
+            <div id="left">
+                <div class="bg-img"></div>
             </div>
-            <div class="card-content">
-              <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried <star-rating v-bind:star-size="25" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
-            </div>
+            <div id="right">
+                <div class="card-content-aside">
+                    <h1>Remote: Office Not Required</h1>
+                    <span> Stephen king</span>
+                    <span>/ <i class="fas fa-star" style="color: rgba(38, 132, 240, 0.8);"> </i> 4.68</span><p>2,346 reviews</p>
+                </div>
 
+                <div class="card-content-main">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus nulla. Pellentesque at imperdiet leo.</p>
+                    <a href="/#">Full Synopsis</a>
+                </div>
+                <br>
+                <hr>
+                <div class="card-content-rating" style="text-align: center; font-size: 15px; font-weight: 600; display: flow-root;">
+                    <p>TAP TO ADD RATING</p>
+                    <p style="margin-left:130px"><star-rating v-bind:star-size="35" :increment="0.5"></star-rating></p>
+                    
+                </div>
+                <br>
+                <div class="btn" style="text-align: center; ">
+                    <router-link to='/success'><button>Next</button></router-link>
+                </div>
+
+                
+            </div>
             
-          </div>
-          
+        
         </div>
+          
     </div>
 
     </div>
@@ -59,50 +78,49 @@ Vue.component('star-rating', VueStarRating.default);
 // import Header from '@/components/Partials/Header.vue'
 
 export default {
-  name: 'home',
-  components: {
-    
+    name: 'home',
+    components: {
     // HelloWorld,
     // Header
-  }
+    }
 }
 </script>
 
 <style scoped>
 /* Start card component */
+
 .card {
-  border: 1px solid #d3d3d3;
-  border-radius: .25rem;
+    display: flex;
 }
 
+#left {
+  flex: 0 0 45%;
+}
+
+#right {
+  flex: 1;
+  margin-left: 20px;
+}
 .bg-img {
   background-size: cover;
   background-image:url('https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg');
-  min-height: 150px;
+  min-height: 500px;
   background-position: center;
   background-color: #ccc;
 }
 
-.card-content {
-  padding: 15px;
-}
-
 button {
-  background: rgb(0,179,0);
-  background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(0,153,0,1) 100%);
-  border: 1px solid rgb(225,255,128);
-  color: white;
-  font-weight: bold;
-  padding: .5rem 1rem;
-  cursor: pointer;
-  border-radius: .25rem;
+    width: 300px;
+    background: rgb(0,179,0);
+    background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(0,153,0,1) 100%);
+    border: 1px solid rgb(225,255,128);
+    color: white;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
 /* end card components */
 
 /* Start Sidebar component */
@@ -113,12 +131,10 @@ button {
   margin-right: 20px;
   text-decoration: none;
   color: #2c3e50;
-
 }
 .sidebar nav a:hover {
   color: rgba(38, 132, 240, 0.8);
 }
-
 .sidebar nav a:active {
   color: rgba(38, 132, 240, 0.8);
 }
@@ -138,6 +154,7 @@ button {
 .main {
   background: aliceblue;
   margin-left: -7px;
+  margin-right: -7px;
 }
 
 input[type=text], select {
@@ -179,10 +196,10 @@ input[type=text], select {
   width: 300px;
 }
 .header-fixed {
-  margin: -7px;
-  background: rgb(255,128,170);
-  background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
-	/* background-color:  rgba(38, 132, 240, 0.8); */
+    margin: -7px;
+    background: rgb(255,128,170);
+    background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
+	
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 80px;

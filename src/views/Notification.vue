@@ -10,7 +10,7 @@
     <div class="sidebar">
         <nav>
             <router-link to="/timeline"><a href="">Timeline</a></router-link>
-            <router-link to="/home"> <a href="" class="active">My Books</a></router-link>
+            <router-link to="/home"> <a href="">My Books</a></router-link>
             <router-link to="/review"><a href=""> Add Review</a></router-link>
             <router-link to="/notification"><a href="">Notification</a></router-link>
         </nav>
@@ -19,10 +19,10 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>My Books List <span style="font-size: 10px; font-weight: lighter;" >(BOOKS REVIEWED BY YOU)</span></p>
+          <p>Notification</p>
         </div>
         <div class="search">
-          <input type="text" id="fname" name="password" placeholder="Search Book..">
+          <input type="text" id="fname" name="password" placeholder="Search..">
         </div>
       </div>
       <div class="content-body">
@@ -34,10 +34,8 @@
             </div>
             <div class="card-content">
               <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried <star-rating v-bind:star-size="25" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
+              <p>Jason Fried</p> <button>Add Book Review</button> 
             </div>
-
-            
           </div>
           
         </div>
@@ -51,9 +49,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueStarRating from 'vue-star-rating';
-Vue.component('star-rating', VueStarRating.default);
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 // import Header from '@/components/Partials/Header.vue'
@@ -61,7 +56,6 @@ Vue.component('star-rating', VueStarRating.default);
 export default {
   name: 'home',
   components: {
-    
     // HelloWorld,
     // Header
   }
@@ -91,8 +85,6 @@ button {
   background: rgb(0,179,0);
   background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(0,153,0,1) 100%);
   border: 1px solid rgb(225,255,128);
-  color: white;
-  font-weight: bold;
   padding: .5rem 1rem;
   cursor: pointer;
   border-radius: .25rem;
@@ -113,12 +105,10 @@ button {
   margin-right: 20px;
   text-decoration: none;
   color: #2c3e50;
-
 }
 .sidebar nav a:hover {
   color: rgba(38, 132, 240, 0.8);
 }
-
 .sidebar nav a:active {
   color: rgba(38, 132, 240, 0.8);
 }
@@ -182,7 +172,6 @@ input[type=text], select {
   margin: -7px;
   background: rgb(255,128,170);
   background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
-	/* background-color:  rgba(38, 132, 240, 0.8); */
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 80px;
