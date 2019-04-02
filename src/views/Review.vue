@@ -15,9 +15,9 @@
       </div>
       <div class="content-body">
 
-          <div class="card">
+          <div class="card-1">
             <div id="left">
-                <div class="bg-img"></div>
+                <div class="bg-img-1"></div>
             </div>
             <div id="right">
                 <div class="card-content-aside">
