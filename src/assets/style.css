@@ -66,6 +66,7 @@ html, body {
   width: 100%;
   height: 650px;
   display: flex;
+  
 }
 .split {
   transition:all 1s ease;
@@ -80,7 +81,7 @@ html, body {
     var(--bg-url) center center no-repeat / cover;
 }
 .left {
-    background-color : white;
+  background: linear-gradient(336.91deg, #F0F4FD -56.86%, #FFFFFF 126.39%);
 }
 .right {
     width: 0px;
@@ -96,8 +97,10 @@ html, body {
 
 
 .card {
-  border: 1px solid #d3d3d3;
+  background-color: white;
   border-radius: .25rem;
+  box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+  border-radius: 8px;
 }
 
 .bg-img {
@@ -115,10 +118,10 @@ html, body {
 }
 
 button {
-  background: rgb(0,179,0);
-  background: linear-gradient(90deg, rgba(0,179,0,1) 0%, rgba(0,153,0,1) 100%);
-  border: 1px solid rgb(225,255,128);
+  background: linear-gradient(166.04deg, #BAFB67 -5.37%, #00D23A 196.64%);
+  /* border: 1px solid rgb(225,255,128); */
   color: white;
+  border-radius: 8px;
   font-weight: bold;
   padding: .5rem 1rem;
   cursor: pointer;
@@ -134,7 +137,8 @@ button {
 
 
 .main {
-  background: aliceblue;
+  background: linear-gradient(147.21deg, #EEECFF -8.91%, #FFFFFF 99.17%);
+  /* background: aliceblue; */
   margin-left: -7px;
 }
 
@@ -154,12 +158,29 @@ input[type=text], select {
   margin-top: 60px;
   height: auto;
   padding: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.content .content-body-notification {
+  margin-top: 60px;
+  height: auto;
+  padding: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+  background-color: white;
+  box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+}
+
+.content .content-body-timeline {
+  margin-top: 60px;
+  height: auto;
+  padding: 10px;
   background-color: #ffffff;
   margin-left: 250px;
   margin-right: 250px;
-  border-style: ridge;
-  border-radius: 5px;
-  border-color: aliceblue;
+  border-radius: 8px;
+  box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
 }
 .content .content-header {
   margin-left: 250px;
@@ -227,6 +248,10 @@ ul.timeline > li:before {
 
 .card-1{
   display: flex;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+  border-radius: 8px;
 }
 
 #left {
@@ -239,9 +264,23 @@ margin-left: 20px;
 }
 .bg-img-1 {
   background-size: cover;
-    width: 100%;
-    /* background-image: url(https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg); */
-    /* min-height: 50px; */
-    /* background-position: center; */
-    background-color: #ccc;
+  width: 100%;
+  background-color: #ccc;
 }
+
+.card-success {
+  box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+  border-radius: 8px;
+}
+
+.bg-img-success {
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  background-color: #ccc;
+}
+
+.card-content-success {
+  padding: 15px;
+}
+

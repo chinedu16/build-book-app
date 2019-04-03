@@ -23,18 +23,17 @@ export default {
 .sidebar nav a {
   margin-right: 20px;
   text-decoration: none;
-  color: #2c3e50;
+  color:#A5B0C4;
   font-weight: lighter;
 
 }
 .sidebar nav a:hover {
-  color: rgba(0,179,0,1);
+  color: #384F7D;
 }
 
-.sidebar nav a:active {
-  color: rgba(38, 132, 240, 0.8);
+.sidebar nav a a.active{
+  color: #384F7D;
 }
-
 
 .sidebar {
   padding: 10px;

@@ -16,32 +16,13 @@
       <div class="content-body">
           <p style="text-align: center;font-weight: bold;">YOU MAY ALSO BE INTERESED IN</p>
         <div class="grid-container">
-          
-          <div class="card-success">
-            <div class="bg-img-success">
-            </div>
+          <div class="card-success" v-for="book in recentBooks" :key="book.id">
+            <img class="bg-img-success" :src="book.url" >
             <div class="card-content-success">
-              <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried </p> 
+              <h4>{{book.title}}</h4>
+              <p>{{book.author}}</p> 
             </div> 
-          </div>
-           <div class="card-success">
-            <div class="bg-img-success">
-            </div>
-            <div class="card-content-success">
-              <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried </p> 
-            </div>  
-          </div>
-           <div class="card-success">
-            <div class="bg-img-success">
-            </div>
-            <div class="card-content-success">
-              <h4>Remote: Office Not Required</h4>
-              <p>Jason Fried </p> 
-            </div> 
-          </div>
-          
+          </div>          
         </div>
     </div>
 
@@ -62,34 +43,35 @@ import Sidebar from '@/components/Partials/Sidebar.vue'
 
 export default {
   name: 'home',
+  data: function() {
+    return {
+      recentBooks: [
+        {
+          id: 1,
+          title: 'Bible Science',
+          url: 'http://kidsbiblescience.com/lark2011ableWPwind/wp-content/uploads/2011/03/EBS-Youth-front-cover.jpg',
+          author: 'Berret Derr '
+        },
+        {
+          id: 2,
+          title: 'Love Story',
+          url: 'https://upload.wikimedia.org/wikipedia/en/d/d1/I_Too_Had_a_Love_Story_front_cover.jpg',
+          author: 'National Screte'
+        },
+        {
+          id: 3,
+          title: 'History of War',
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0EOYy46zFTxu8rogx-HMdJDLlZBP8px9I1jIuenT4TjotftSmQ',
+          author: 'The Post'
+        }
+      ]
+
+    }
+  },
   components: {
     'sidebar': Sidebar,
     'header-tab': Header
   }
 }
 </script>
-
-<style scoped>
-/* Start card component */
-.card-success {
-  border: 1px solid #d3d3d3;
-  border-radius: .25rem;
-}
-
-.bg-img-success {
-  background-size: cover;
-  background-image:url('https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg');
-  min-height: 150px;
-  background-position: center;
-  background-color: #ccc;
-}
-
-.card-content-success {
-  padding: 15px;
-}
-
-
-
-
-</style>
 
