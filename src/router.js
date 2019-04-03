@@ -37,7 +37,8 @@ export default new Router({
     {
       path: '/review',
       name: 'review',
-      component: Review
+      component: Review,
+      props: true
     },
     {
       path: '/timeline',
