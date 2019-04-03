@@ -13,7 +13,7 @@
           <input type="text" id="fname" name="password" placeholder="Search..">
         </div>
       </div>
-      <div class="content-body">
+      <div class="content-body-timeline">
         <ul class="timeline" v-for="time in timeline" :key="time.id">
             <li>
                 <a class="header" target="_blank" href="#">{{time.title}}</a>

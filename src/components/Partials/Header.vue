@@ -1,7 +1,7 @@
 <template>
     <header class="header-fixed">
       <div class="header-limiter">
-        <h1><a href="#"><i class="fas fa-book-open"></i> Book<span>App</span></a></h1>
+        <h1 style="font-weight: bolder"><a href="#"><i class="fas fa-book-open"></i> Book<span>App</span></a></h1>
       </div>
     </header>
 </template>
@@ -16,7 +16,7 @@ export default {
 .header-fixed {
   margin: -7px;
   background: rgb(255,128,170);
-  background: linear-gradient(90deg, rgba(255,128,170,1) 0%, rgba(255,194,102,1) 100%);
+  background: linear-gradient(210.28deg, #FEB665 37.28%, #F66EB4 76.65%);
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 80px;
