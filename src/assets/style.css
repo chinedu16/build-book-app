@@ -225,7 +225,7 @@ ul.timeline > li:before {
 
 
 
-.card {
+.card-1{
   display: flex;
 }
 
@@ -237,10 +237,11 @@ flex: 0 0 45%;
 flex: 1;
 margin-left: 20px;
 }
-.bg-img {
-background-size: cover;
-background-image:url('https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg');
-min-height: 500px;
-background-position: center;
-background-color: #ccc;
+.bg-img-1 {
+  background-size: cover;
+    width: 100%;
+    /* background-image: url(https://jlongroadmedia.files.wordpress.com/2013/12/catchingfire.jpg); */
+    /* min-height: 50px; */
+    /* background-position: center; */
+    background-color: #ccc;
 }

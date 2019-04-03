@@ -1,7 +1,7 @@
 <template>
     <header class="header-fixed">
       <div class="header-limiter">
-        <h1><a href="#">Book<span>App</span></a></h1>
+        <h1><a href="#"><i class="fas fa-book-open"></i> Book<span>App</span></a></h1>
       </div>
     </header>
 </template>

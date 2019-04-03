@@ -7,7 +7,7 @@
     <div class="content">
       <div class="content-header">
         <div class="content-header-name">
-          <p>{{msg}}</p>
+          <p><i class="fas fa-star"></i>{{msg}}</p>
         </div>
         <div class="search">
           <input type="text" id="fname" name="password" placeholder="Search Books..">
@@ -15,9 +15,9 @@
       </div>
       <div class="content-body">
 
-          <div class="card">
+          <div class="card-1">
             <div id="left">
-                <div class="bg-img"></div>
+                <img class="bg-img-1" :src="url" alt="" srcset="">
             </div>
             <div id="right">
                 <div class="card-content-aside">
@@ -34,7 +34,7 @@
                 <hr>
                 <div class="card-content-rating" style="text-align: center; font-size: 15px; font-weight: 600; display: flow-root;">
                     <p>{{rating}}</p>
-                    <p style="margin-left:130px"><star-rating v-bind:star-size="35" :increment="0.5"></star-rating></p>
+                    <p style="margin-left:130px"><star-rating v-bind:star-size="35" :rating="rating_score" :increment="0.5"></star-rating></p>
                 </div>
                 <br>
                 <div class="btn" style="text-align: center; ">
@@ -60,10 +60,25 @@ export default {
   data:  function() {
     return {
       msg: 'Add Books Review',
-      title: 'Remote: Office Not Required',
-      author: 'Stephen king',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus nulla. Pellentesque at imperdiet leo.',
+      id: '',
+      title: '',
+      author: '',
+      description: '',
+      url: '',
+      rating_score: '',
       rating: 'TAP TO ADD RATING'
+    }
+  },
+  created() {
+    this.id = this.$route.params.id;
+    this.title = this.$route.params.title;
+    this.author = this.$route.params.author;
+    this.description = this.$route.params.description;
+    this.url = this.$route.params.url;
+    this.rating_score = this.$route.params.rating;
+
+    if (!this.$route.params.id) {
+      this.$router.push('home')
     }
   },
   components: {
