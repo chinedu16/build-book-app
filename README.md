@@ -1,28 +1,25 @@
 # book-app
 
+## Clone Projects
+```
+git clone https://github.com/chinedu16/build-book-app.git
+```
+```
+cd Project
+```
 ## Project setup
 ```
 yarn install
 ```
 
+## Node Requirement
+```
+node >=v10.15.3
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
 ```
 
 ### Customize configuration
