@@ -19,7 +19,7 @@
             <img class="bg-img" :src="book.url" alt="" srcset="">
             <div class="card-content">
               <h4>{{book.title}}</h4>
-              <p>{{book.author}}<star-rating v-bind:star-size="25" :rating="book.rating" :increment="0.5"></star-rating></p> <router-link to='/review'><button>Add Book Review</button> </router-link>
+              <p>{{book.author}}<star-rating v-bind:star-size="25" :rating="book.rating" :increment="0.5"></star-rating></p> <router-link :to="{ name: 'review', params: {id: book.id, url: book.url ,title: book.title, author: book.author, rating: book.rating ,description: book.description }}"><button>Add Book Review</button> </router-link>
             </div>            
           </div>
         </div>
