@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "npm install express",
+    "start": "node server.js",
     "serve": "vue-cli-service serve",
-    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.6",
+    "express": "^4.16.4",
+    "vue": "^2.6.10",
     "vue-carousel": "^0.18.0",
     "vue-router": "^3.0.1",
     "vue-star-rating": "^1.6.1",
